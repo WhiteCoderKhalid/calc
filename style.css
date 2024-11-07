@@ -1,4 +1,4 @@
-body{
+body {
     background-color: hsl(0, 0%, 95%);
     display: flex;
     justify-content: center;
@@ -6,50 +6,92 @@ body{
     height: 100vh;
     margin: 0;
 }
-.caculator{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: hsl(0, 0%, 15%);
-    border-radius: 15px;
-    max-width: 500px;
-    overflow: hidden;
-}
-#display{
-    background-color: hsl(0, 0%, 25%);
-    padding: 20px;
-    font-size: 5rem;
-    border: none;
-    text-align: left;
-    color: white;
-}
-.keys{
-display: gird;
-grid-template-columns: repeat(4, 1fr);
-gap: 10px;
-padding: 25px;
+.cont{
+margin-top: 23px;
+background-color: hsl(0, 0%, 6%);
 
 }
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    border: none;
-    background-color:hsl(0, 0%, 30%) ;
-    color: white;
-    font-size: 3rem;
-    cursor: pointer;
+.calculator {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    margin-top: 100px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-button:hover{
+
+#display {
+    background-color: hsl(0, 0%, 25%);
+    padding: 20px;
+    font-size: 3rem; /* Adjusted for better mobile display */
+    border: none;
+    text-align: right; /* Changed to right for calculator display */
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100%;
+    height: 100px;
+    border-radius: 20px; /* Adjusted for smoother corners */
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 2rem; /* Reduced size for better mobile display */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
     background-color: hsl(0, 0%, 40%);
 }
-button:active{
+
+button:active {
     background-color: hsl(0, 0%, 50%);
 }
-.operator{
+
+.operator {
     background-color: hsl(34, 80%, 50%);
 }
-.operator:hover{
-    background-color: hsl(34, 80%, 65%)
+
+.operator:hover {
+    background-color: hsl(34, 100%, 65%);
 }
-.operator:hover{
-    background-color: hsl(34, 100%, 65%)
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .cont{
+        margin-top: 0;
+        background-color: hsl(0, 0%, 6%);
+        
+        }
+    .calculator {
+        max-width: 100%; /* Full width on smaller screens */
+        margin-top: 50px;
+    }
+
+    #display {
+        font-size: 2.5rem; /* Smaller font for display */
+        padding: 15px;
+    }
+
+    button {
+        height: 80px; /* Reduced button size */
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .keys {
+        grid-template-columns: repeat(4, 1fr); /* Keep 4 buttons per row */
+        gap: 5px;
+        padding: 20px;
+    }
 }
