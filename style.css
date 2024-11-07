@@ -69,28 +69,27 @@ button:active {
 
 /* Mobile responsiveness */
 @media (max-width: 600px) {
-    .cont{
-        margin-top: 0;
-        background-color: hsl(0, 0%, 6%);
-        
-        }
+    body{
+        background-color: black;
+        padding-top: 0px;
+    }
     .calculator {
-        max-width: 100%; /* Full width on smaller screens */
-        margin-top: 50px;
+        margin-top: 0px;
+        max-width: 100%; 
     }
 
     #display {
-        font-size: 2.5rem; /* Smaller font for display */
+        font-size: 2.5rem; 
         padding: 15px;
     }
 
     button {
-        height: 80px; /* Reduced button size */
-        font-size: 1.5rem; /* Smaller font size */
+        height: 80px; 
+        font-size: 1.5rem; 
     }
 
     .keys {
-        grid-template-columns: repeat(4, 1fr); /* Keep 4 buttons per row */
+        grid-template-columns: repeat(4, 1fr); 
         gap: 5px;
         padding: 20px;
     }
